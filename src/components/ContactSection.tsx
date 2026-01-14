@@ -1,49 +1,49 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Send } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "sonner";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { toast } from 'sonner';
 
 const contactInfo = [
   {
     icon: Phone,
-    title: "Phone",
-    value: "+61 422 212 932",
-    href: "tel:+61422212932",
+    title: 'Phone',
+    value: '+00 000 000 000',
+    href: 'tel:+00000000000',
   },
   {
     icon: Mail,
-    title: "Email",
-    value: "care@praana.com.au",
-    href: "mailto:care@praana.com.au",
+    title: 'Email',
+    value: 'care@praana.com.au',
+    href: 'mailto:care@praana.com.au',
   },
 ];
 
 const locations = [
   {
-    city: "Darwin City, NT",
-    address: "0800 Australia",
+    city: 'Ragama',
+    address: '0000 Sri Lanka',
   },
   {
-    city: "Brisbane, QLD",
-    address: "4000 Australia",
+    city: 'Ragama',
+    address: '4000 Sri Lanka',
   },
 ];
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    message: "",
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thank you for your message! We'll get back to you soon.");
-    setFormData({ firstName: "", lastName: "", email: "", message: "" });
+    setFormData({ firstName: '', lastName: '', email: '', message: '' });
   };
 
   return (
@@ -81,9 +81,7 @@ export const ContactSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="font-display text-2xl font-bold text-primary-foreground mb-8">
-              Contact Information
-            </h3>
+            <h3 className="font-display text-2xl font-bold text-primary-foreground mb-8">Contact Information</h3>
 
             {/* Contact Methods */}
             <div className="space-y-6 mb-10">
@@ -107,15 +105,10 @@ export const ContactSection = () => {
             </div>
 
             {/* Locations */}
-            <h3 className="font-display text-2xl font-bold text-primary-foreground mb-6">
-              Our Locations
-            </h3>
+            <h3 className="font-display text-2xl font-bold text-primary-foreground mb-6">Our Locations</h3>
             <div className="grid sm:grid-cols-2 gap-4">
               {locations.map((location) => (
-                <div
-                  key={location.city}
-                  className="p-4 bg-primary-foreground/10 rounded-xl backdrop-blur-sm"
-                >
+                <div key={location.city} className="p-4 bg-primary-foreground/10 rounded-xl backdrop-blur-sm">
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
                     <div>
@@ -136,15 +129,11 @@ export const ContactSection = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="bg-card rounded-3xl p-8 shadow-healthcare-xl">
-              <h3 className="font-display text-2xl font-bold text-primary mb-6">
-                Send Us a Message
-              </h3>
+              <h3 className="font-display text-2xl font-bold text-primary mb-6">Send Us a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      First Name
-                    </label>
+                    <label className="block text-sm font-medium text-foreground mb-2">First Name</label>
                     <Input
                       type="text"
                       placeholder="John"
@@ -155,9 +144,7 @@ export const ContactSection = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Last Name
-                    </label>
+                    <label className="block text-sm font-medium text-foreground mb-2">Last Name</label>
                     <Input
                       type="text"
                       placeholder="Doe"
@@ -169,9 +156,7 @@ export const ContactSection = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Email Address
-                  </label>
+                  <label className="block text-sm font-medium text-foreground mb-2">Email Address</label>
                   <Input
                     type="email"
                     placeholder="john@example.com"
@@ -182,9 +167,7 @@ export const ContactSection = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Message
-                  </label>
+                  <label className="block text-sm font-medium text-foreground mb-2">Message</label>
                   <Textarea
                     placeholder="Tell us about your care needs..."
                     value={formData.message}

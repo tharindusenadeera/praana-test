@@ -1,12 +1,12 @@
-import { motion } from "framer-motion";
-import { ArrowRight, Heart, Shield, Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-image.jpg";
+import { motion } from 'framer-motion';
+import { ArrowRight, Heart, Shield, Clock } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import heroImage from '@/assets/hero-image.jpg';
 
 const stats = [
-  { icon: Heart, value: "500+", label: "Families Served" },
-  { icon: Shield, value: "24/7", label: "Care Available" },
-  { icon: Clock, value: "10+", label: "Years Experience" },
+  { icon: Heart, value: '500+', label: 'Families Served' },
+  { icon: Shield, value: '24/7', label: 'Care Available' },
+  { icon: Clock, value: '10+', label: 'Years Experience' },
 ];
 
 export const Hero = () => {
@@ -14,11 +14,7 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Compassionate healthcare"
-          className="w-full h-full object-cover"
-        />
+        <img src={heroImage} alt="Compassionate healthcare" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-secondary/70" />
       </div>
 
@@ -51,8 +47,7 @@ export const Hero = () => {
               transition={{ delay: 0.3 }}
               className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             >
-              Your Health is{" "}
-              <span className="text-secondary">Our Priority</span>
+              Your Health is <span className="text-secondary">Our Priority</span>
             </motion.h1>
 
             <motion.p
@@ -61,9 +56,8 @@ export const Hero = () => {
               transition={{ delay: 0.4 }}
               className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-xl"
             >
-              Experience compassionate, personalized home healthcare services in Australia. 
-              Our qualified team provides holistic care focusing on physical, mental, and 
-              social well-being.
+              Experience compassionate, personalized home healthcare services in Sri Lanka. Our qualified team provides
+              holistic care focusing on physical, mental, and social well-being.
             </motion.p>
 
             <motion.div
