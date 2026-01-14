@@ -26,7 +26,6 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: praana-care-hub/package-lock.json
 
       - name: Install
         working-directory: praana-care-hub
