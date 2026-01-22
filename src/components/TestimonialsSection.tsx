@@ -1,22 +1,22 @@
-import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { motion } from 'framer-motion';
+import { Star, Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: "Sarah Thompson",
-    location: "Darwin, NT",
+    name: 'Dhanooj Ranaweera',
+    location: 'Mabodala, DP',
     rating: 5,
-    text: "Praana provided exceptional care and peace of mind for our family. The doctors and caregivers treated my mother with such compassion and professionalism.",
+    text: 'Praana provided exceptional care and peace of mind for our family. The doctors and caregivers treated my mother with such compassion and professionalism.',
   },
   {
-    name: "Michael Chen",
-    location: "Brisbane, QLD",
+    name: 'Jeewantha Dissanayake',
+    location: 'Nittambuwa, GM',
     rating: 5,
     text: "The holistic approach to my father's care has been remarkable. From the personalized meal plans to the physiotherapy sessions, every detail is thoughtfully managed.",
   },
   {
-    name: "Emma Williams",
-    location: "Darwin, NT",
+    name: 'Ishara Wickramasena',
+    location: 'Urapola, GM',
     rating: 5,
     text: "Having regular doctor visits and constant updates about my grandmother's health has been invaluable. We finally have peace of mind knowing she's in good hands.",
   },
@@ -69,16 +69,12 @@ export const TestimonialsSection = () => {
                 </div>
 
                 {/* Content */}
-                <p className="text-foreground mb-6 leading-relaxed relative z-10">
-                  "{testimonial.text}"
-                </p>
+                <p className="text-foreground mb-6 leading-relaxed relative z-10">"{testimonial.text}"</p>
 
                 {/* Author */}
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-teal-light flex items-center justify-center">
-                    <span className="text-secondary-foreground font-bold text-lg">
-                      {testimonial.name.charAt(0)}
-                    </span>
+                    <span className="text-secondary-foreground font-bold text-lg">{testimonial.name.charAt(0)}</span>
                   </div>
                   <div>
                     <p className="font-display font-bold text-primary">{testimonial.name}</p>

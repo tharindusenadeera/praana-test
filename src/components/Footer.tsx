@@ -48,17 +48,17 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-secondary" />
-                <a href="tel:+00000000000" className="text-background/70 hover:text-secondary transition-colors">
-                  +00 000 000 000
+                <a href="tel:+94707110235" className="text-background/70 hover:text-secondary transition-colors">
+                  +94 707 110 235
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-secondary" />
                 <a
-                  href="mailto:care@praana.com.au"
+                  href="mailto:praanacareservices@gmail.com"
                   className="text-background/70 hover:text-secondary transition-colors"
                 >
-                  care@praana.com.au
+                  praanacareservices@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">

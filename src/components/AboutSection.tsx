@@ -1,14 +1,14 @@
-import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
-import aboutImage from "@/assets/about-image.jpg";
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import aboutImage from '@/assets/about-image.jpg';
 
 const features = [
-  "All services supervised by a team of doctors",
-  "Qualified, trustworthy NVQ 3 & 4 caregivers",
-  "Personalized care plans for individual needs",
-  "Holistic focus on physical, mental & social well-being",
-  "Flexible and transparent payment packages",
-  "Regular feedback reports to guardians",
+  'All services supervised by a team of doctors',
+  'Qualified, trustworthy NVQ 3 & 4 caregivers',
+  'Personalized care plans for individual needs',
+  'Holistic focus on physical, mental & social well-being',
+  'Flexible and transparent payment packages',
+  'Regular feedback reports to guardians',
 ];
 
 export const AboutSection = () => {
@@ -25,15 +25,11 @@ export const AboutSection = () => {
             className="relative"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-healthcare-xl">
-              <img
-                src={aboutImage}
-                alt="Doctor consultation"
-                className="w-full h-auto object-cover"
-              />
+              <img src={aboutImage} alt="Doctor consultation" className="w-full h-auto object-cover" />
               {/* Decorative overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
-            
+
             {/* Floating Card */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -48,7 +44,7 @@ export const AboutSection = () => {
                 </div>
                 <div>
                   <p className="font-display font-bold text-primary text-lg">Trusted Care</p>
-                  <p className="text-sm text-muted-foreground">Police Cleared Staff</p>
+                  <p className="text-sm text-muted-foreground">Under doctor’s supervision</p>
                 </div>
               </div>
             </motion.div>
@@ -71,9 +67,9 @@ export const AboutSection = () => {
               Compassionate Care, <span className="text-secondary">Right at Home</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              At Praana, we believe that true healing happens best in the comfort of your own home. 
-              Our doctor-led team provides personalized healthcare services that focus on the complete 
-              well-being of our patients - physical, mental, and social.
+              At Praana, we believe that true healing happens best in the comfort of your own home. Our doctor-led team
+              provides personalized healthcare services that focus on the complete well-being of our patients -
+              physical, mental, and social.
             </p>
 
             {/* Features List */}

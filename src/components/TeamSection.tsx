@@ -1,32 +1,32 @@
-import { motion } from "framer-motion";
-import { GraduationCap, Stethoscope, Heart, Activity, UtensilsCrossed } from "lucide-react";
-import teamImage from "@/assets/team-image.jpg";
+import { motion } from 'framer-motion';
+import { GraduationCap, Stethoscope, Heart, Activity, UtensilsCrossed } from 'lucide-react';
+import teamImage from '@/assets/team-image.jpg';
 
 const teamMembers = [
   {
     icon: Stethoscope,
-    title: "Geriatric Specialists",
-    description: "Doctors specialized in Geriatric and Family Medicine",
+    title: 'Geriatric Specialists',
+    description: 'Doctors specialized in Geriatric and Family Medicine',
   },
   {
     icon: Heart,
-    title: "Nursing Officers",
-    description: "Special Grade Nursing Officers with extensive experience",
+    title: 'Nursing Officers',
+    description: 'Government registered NO with extensive experience',
   },
   {
     icon: GraduationCap,
-    title: "Qualified Caregivers",
-    description: "NVQ Level 3 & 4 qualified caregivers, police cleared",
+    title: 'Qualified Caregivers',
+    description: 'NVQ Level 3 & 4 qualified caregivers, police cleared',
   },
   {
     icon: UtensilsCrossed,
-    title: "Nutritionist",
-    description: "Medical Nutritionist for personalized meal planning",
+    title: 'Nutritionist',
+    description: 'Medical Nutritionist for personalized meal planning',
   },
   {
     icon: Activity,
-    title: "Rehabilitation Team",
-    description: "Physiotherapist and Occupational Therapist",
+    title: 'Rehabilitation Team',
+    description: 'Physiotherapist and Occupational Therapist',
   },
 ];
 
@@ -49,8 +49,8 @@ export const TeamSection = () => {
               Meet Our <span className="text-secondary">Expert Team</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-              Our multidisciplinary team of healthcare professionals brings together expertise 
-              from various medical fields to provide comprehensive, holistic care for every patient.
+              Our multidisciplinary team of healthcare professionals brings together expertise from various medical
+              fields to provide comprehensive, holistic care for every patient.
             </p>
 
             {/* Team List */}
@@ -85,14 +85,10 @@ export const TeamSection = () => {
             className="relative"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-healthcare-xl">
-              <img
-                src={teamImage}
-                alt="Healthcare team"
-                className="w-full h-auto object-cover"
-              />
+              <img src={teamImage} alt="Healthcare team" className="w-full h-auto object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
             </div>
-            
+
             {/* Decorative Elements */}
             <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-secondary/10 rounded-3xl -z-10" />
             <div className="absolute -top-8 -left-8 w-24 h-24 bg-coral/10 rounded-full -z-10" />

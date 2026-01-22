@@ -1,36 +1,37 @@
-import { motion } from "framer-motion";
-import { Stethoscope, Calendar, UserCheck, ClipboardList, HeartPulse, Users } from "lucide-react";
+import { motion } from 'framer-motion';
+import { Stethoscope, Calendar, UserCheck, ClipboardList, HeartPulse, Users } from 'lucide-react';
 
 const benefits = [
   {
     icon: Stethoscope,
-    title: "Doctor-Led Care",
-    description: "Booking and initial assessment led by experienced doctors specialized in geriatric and family medicine.",
+    title: 'Doctor-Led Care',
+    description:
+      'Booking and initial assessment led by experienced doctors specialized in geriatric and family medicine.',
   },
   {
     icon: Calendar,
-    title: "Monthly Doctor Visits",
-    description: "Regular doctor visits when required to ensure continuous monitoring of health progress.",
+    title: 'Monthly Doctor Visits',
+    description: 'Regular doctor visits when required to ensure continuous monitoring of health progress.',
   },
   {
     icon: UserCheck,
-    title: "Specialist Referrals",
-    description: "Seamless arrangement of specialist consultations when additional expertise is needed.",
+    title: 'Specialist Referrals',
+    description: 'Seamless arrangement of specialist consultations when additional expertise is needed.',
   },
   {
     icon: HeartPulse,
-    title: "Hospital Support",
-    description: "Comprehensive support during hospitalization including coordination with medical teams.",
+    title: 'Hospital Support',
+    description: 'Comprehensive support during hospitalization and throughout hospital stay.',
   },
   {
     icon: ClipboardList,
-    title: "Personalized Plans",
-    description: "Custom exercise routines, meal plans, and mental wellness activities tailored to each patient.",
+    title: 'Personalized Plans',
+    description: 'Custom exercise routines, meal plans, and mental wellness activities tailored to each patient.',
   },
   {
     icon: Users,
-    title: "Family Updates",
-    description: "Regular feedback reports provided to guardians to keep families informed and connected.",
+    title: 'Family Updates',
+    description: 'Regular feedback reports provided to guardians to keep families informed and connected.',
   },
 ];
 
@@ -52,8 +53,8 @@ export const WhyPraanaSection = () => {
             What Makes <span className="text-secondary">Praana Different</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            We go beyond traditional home care with our doctor-supervised approach, 
-            ensuring the highest quality of medical attention for your loved ones.
+            We go beyond traditional home care with our doctor-supervised approach, ensuring the highest quality of
+            medical attention for your loved ones.
           </p>
         </motion.div>
 
@@ -72,12 +73,8 @@ export const WhyPraanaSection = () => {
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-teal-light flex items-center justify-center mb-6 transition-transform group-hover:scale-110">
                   <benefit.icon className="w-7 h-7 text-secondary-foreground" />
                 </div>
-                <h3 className="font-display text-xl font-bold text-primary mb-3">
-                  {benefit.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {benefit.description}
-                </p>
+                <h3 className="font-display text-xl font-bold text-primary mb-3">{benefit.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
               </div>
             </motion.div>
           ))}
