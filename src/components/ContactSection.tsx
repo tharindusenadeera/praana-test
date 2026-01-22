@@ -10,14 +10,14 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    value: '+00 000 000 000',
-    href: 'tel:+00000000000',
+    value: '+94 707 110 235',
+    href: 'tel:+94707110235',
   },
   {
     icon: Mail,
     title: 'Email',
-    value: 'care@praana.com.au',
-    href: 'mailto:care@praana.com.au',
+    value: 'praanacareservices@gmail.com',
+    href: 'mailto:praanacareservices@gmail.com',
   },
 ];
 

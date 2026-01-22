@@ -68,13 +68,13 @@ export const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+00000000000"
+              href="tel:+94707110235"
               className={`flex items-center gap-2 text-sm font-medium transition-colors ${
                 scrolled ? 'text-secondary' : 'text-primary-foreground'
               }`}
             >
               <Phone className="w-4 h-4" />
-              +00 000 000 000
+              +94 707 110 235
             </a>
             <Button variant="healthcare" size="lg" asChild>
               <a href="#contact">Get Started</a>
