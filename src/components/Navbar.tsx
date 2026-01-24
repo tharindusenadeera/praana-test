@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import praanaLogo from '@/assets/praana-logo.jpeg';
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -37,7 +38,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <motion.a href="#" className="flex items-center gap-2" whileHover={{ scale: 1.02 }}>
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-secondary to-teal-light flex items-center justify-center">
+            {/* <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-secondary to-teal-light flex items-center justify-center">
               <span className="text-secondary-foreground font-bold text-xl font-display">P</span>
             </div>
             <span
@@ -46,7 +47,8 @@ export const Navbar = () => {
               }`}
             >
               Praana
-            </span>
+            </span> */}
+            <img src={praanaLogo} alt="logo" width={80} className="rounded-xl mt-5" />
           </motion.a>
 
           {/* Desktop Navigation */}

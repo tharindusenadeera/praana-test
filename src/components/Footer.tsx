@@ -1,4 +1,5 @@
 import { Heart, Phone, Mail, MapPin } from 'lucide-react';
+import praanaLogo from '@/assets/praana-logo.jpeg';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +12,9 @@ export const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-secondary to-teal-light flex items-center justify-center">
-                <span className="text-secondary-foreground font-bold text-xl font-display">P</span>
+                <span className="text-secondary-foreground font-bold text-xl font-display">
+                  <img src={praanaLogo} alt="logo" className="rounded-sm" />
+                </span>
               </div>
               <span className="font-display font-bold text-2xl">Praana</span>
             </div>
