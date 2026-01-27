@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
+import Axios from 'axios';
 
 const contactInfo = [
   {
@@ -40,10 +41,42 @@ export const ContactSection = () => {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you for your message! We'll get back to you soon.");
-    setFormData({ firstName: '', lastName: '', email: '', message: '' });
+
+    try {
+      const response = await fetch(
+        'https://script.google.com/macros/s/AKfycbx8t_15OdrasfsQEuWtgd1GrIadrlha6R-9CeRrCHrHkRUzfePfWOpvQ-0flXCCtP8fog/exec',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+          body: new URLSearchParams({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            message: formData.message,
+          }).toString(),
+        },
+      );
+
+      if (!response.ok) {
+        setMessage('Submission failed.');
+      } else {
+        setMessage('Form submitted successfully!');
+        setFormData({ firstName: '', lastName: '', email: '', message: '' });
+      }
+    } catch (error) {
+      setMessage('Error submitting form.');
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    console.log('name: ', name, 'value: ', value);
+
+    setFormData({ ...formData, [name]: value });
   };
 
   return (
@@ -136,9 +169,10 @@ export const ContactSection = () => {
                     <label className="block text-sm font-medium text-foreground mb-2">First Name</label>
                     <Input
                       type="text"
-                      placeholder="John"
+                      name="firstName"
+                      placeholder="First name"
                       value={formData.firstName}
-                      onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                      onChange={handleChange}
                       required
                       className="bg-muted border-border focus:border-secondary"
                     />
@@ -147,9 +181,10 @@ export const ContactSection = () => {
                     <label className="block text-sm font-medium text-foreground mb-2">Last Name</label>
                     <Input
                       type="text"
-                      placeholder="Doe"
+                      name="lastName"
+                      placeholder="Last Name"
                       value={formData.lastName}
-                      onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                      onChange={handleChange}
                       required
                       className="bg-muted border-border focus:border-secondary"
                     />
@@ -159,9 +194,10 @@ export const ContactSection = () => {
                   <label className="block text-sm font-medium text-foreground mb-2">Email Address</label>
                   <Input
                     type="email"
-                    placeholder="john@example.com"
+                    name="email"
+                    placeholder="email@example.com"
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onChange={handleChange}
                     required
                     className="bg-muted border-border focus:border-secondary"
                   />
@@ -170,8 +206,9 @@ export const ContactSection = () => {
                   <label className="block text-sm font-medium text-foreground mb-2">Message</label>
                   <Textarea
                     placeholder="Tell us about your care needs..."
+                    name="message"
                     value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    onChange={handleChange}
                     required
                     rows={5}
                     className="bg-muted border-border focus:border-secondary resize-none"
