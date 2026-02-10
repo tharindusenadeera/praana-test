@@ -48,7 +48,7 @@ export const ContactSection = () => {
 
     try {
       const response = await fetch(
-        'https://script.google.com/macros/s/AKfycbx8t_15OdrasfsQEuWtgd1GrIadrlha6R-9CeRrCHrHkRUzfePfWOpvQ-0flXCCtP8fog/exec',
+        'https://script.google.com/macros/s/AKfycbzRIMne_6sFYQDOFh6-qOP44Uncmh__sTci646UCSjFh3ijyq-4VQvNrhuRwHsJUHtdCA/exec',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
